@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(bg-pic1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #1e1c1c;
+}
+.clock-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 35px;
+    
+}
+#digital-clock {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    background: rgba(247, 245, 245, 0.974);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+#analog-clock {
+    width: 300px;
+    height: 300px;
+     border: 10px solid rgba(255, 255, 255, 0.974);
+    border-radius: 50%;
+    position: relative;
+    /* background: rgba(0, 0, 0, 0.1);  */
+     background-image: url(R.png); 
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    background-color: #0c0c0c;
+    border-radius: 5px;
+    transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+#hour-hand {
+    width: 8px;
+    height: 80px;
+    margin-left: -4px;
+}
+#minute-hand {
+    width: 6px;
+    height: 110px;
+    margin-left: -3px;
+}
+#second-hand {
+    width: 2px;
+    height: 130px;
+    margin-left: -1px;
+    background-color: #0f0e0e;
+}
+.center-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #12e4f3;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+}
+@media (max-width: 600px) {
+    .clock-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    #digital-clock {
+        font-size: 2em;
+        background-color: blanchedalmond;
+    }
+    #analog-clock {
+        background-image: url(bg-pic2.png);
+        background-size: cover;
+       border-radius: 50%;
+    }
+    .hand{
+        background-color: #f5f1f1;
+    }
+    #second-hand{
+        background-color: #f5f1f1;
+    }
+    .center-dot{
+        background-color: coral;
+    }
+    
+}
+
